@@ -1,16 +1,16 @@
-import React,{useState} from "react";
+import React, { useState } from 'react';
 import { Admin, Resource } from 'react-admin';
 import Dashboard from './Dashboard';
-import getList from './dataProvider'
-import ListGuesser from './ListGuesser'
+import getList from './dataProvider';
+import ListGuesser from './ListGuesser';
 
 const App = () => {
-  const [open,setOpen]=useState(false)
+  console.log('hello world');
   return (
     <Admin dashboard={Dashboard} dataProvider={getList}>
-        <Resource name="users" list={ListGuesser} />
+      <Resource name="users" list={ListGuesser} />
     </Admin>
-);
-}
+  );
+};
 
 export default App;
